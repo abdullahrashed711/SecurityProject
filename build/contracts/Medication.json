@@ -1,0 +1,1811 @@
+{
+  "contractName": "Medication",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "perscriptions",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "followUpAppointment",
+          "type": "string"
+        },
+        {
+          "name": "refferalDoctor",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x58be0501"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "perscriptionCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xd0baa2b1"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_medications",
+          "type": "string[]"
+        },
+        {
+          "name": "_doses",
+          "type": "string[]"
+        },
+        {
+          "name": "_intakePeriod",
+          "type": "string[]"
+        },
+        {
+          "name": "_followUpAppointment",
+          "type": "string"
+        },
+        {
+          "name": "_referralDoctor",
+          "type": "string"
+        },
+        {
+          "name": "_labTests",
+          "type": "string[]"
+        }
+      ],
+      "name": "createPatient",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xdda4ac36"
+    }
+  ],
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610805806100246000396000f3fe6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166358be0501811461005b578063d0baa2b114610093578063dda4ac36146100b5575b600080fd5b34801561006757600080fd5b5061007b610076366004610656565b6100d7565b60405161008a939291906106d4565b60405180910390f35b34801561009f57600080fd5b506100a861020e565b60405161008a91906106c0565b3480156100c157600080fd5b506100d56100d0366004610540565b610214565b005b60016020818152600092835260409283902080546004820180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156101745780601f1061014957610100808354040283529160200191610174565b820191906000526020600020905b81548152906001019060200180831161015757829003601f168201915b5050505060058301805460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529495949350908301828280156102045780601f106101d957610100808354040283529160200191610204565b820191906000526020600020905b8154815290600101906020018083116101e757829003601f168201915b5050505050905083565b60005481565b6000805460019081018083556040805160e08101825282815260208082018c81528284018c9052606083018b9052608083018a905260a0830189905260c08301889052938652848152919094208451815591518051929361027d93908501929190910190610314565b5060408201518051610299916002840191602090910190610314565b50606082015180516102b5916003840191602090910190610314565b50608082015180516102d1916004840191602090910190610371565b5060a082015180516102ed916005840191602090910190610371565b5060c08201518051610309916006840191602090910190610314565b505050505050505050565b828054828255906000526020600020908101928215610361579160200282015b828111156103615782518051610351918491602090910190610371565b5091602001919060010190610334565b5061036d9291506103eb565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103b257805160ff19168380011785556103df565b828001600101855582156103df579182015b828111156103df5782518255916020019190600101906103c4565b5061036d929150610411565b61040e91905b8082111561036d576000610405828261042b565b506001016103f1565b90565b61040e91905b8082111561036d5760008155600101610417565b50805460018160011615610100020316600290046000825580601f10610451575061046f565b601f01602090049060005260206000209081019061046f9190610411565b50565b6000601f8201831361048357600080fd5b813561049661049182610738565b610711565b81815260209384019390925082018360005b838110156104d457813586016104be88826104de565b84525060209283019291909101906001016104a8565b5050505092915050565b6000601f820183136104ef57600080fd5b81356104fd61049182610759565b9150808252602083016020830185838301111561051957600080fd5b610524838284610785565b50505092915050565b6000610539823561040e565b9392505050565b60008060008060008060c0878903121561055957600080fd5b863567ffffffffffffffff81111561057057600080fd5b61057c89828a01610472565b965050602087013567ffffffffffffffff81111561059957600080fd5b6105a589828a01610472565b955050604087013567ffffffffffffffff8111156105c257600080fd5b6105ce89828a01610472565b945050606087013567ffffffffffffffff8111156105eb57600080fd5b6105f789828a016104de565b935050608087013567ffffffffffffffff81111561061457600080fd5b61062089828a016104de565b92505060a087013567ffffffffffffffff81111561063d57600080fd5b61064989828a01610472565b9150509295509295509295565b60006020828403121561066857600080fd5b6000610674848461052d565b949350505050565b600061068782610781565b80845261069b816020860160208601610791565b6106a4816107c1565b9093016020019392505050565b6106ba8161040e565b82525050565b602081016106ce82846106b1565b92915050565b606081016106e282866106b1565b81810360208301526106f4818561067c565b90508181036040830152610708818461067c565b95945050505050565b60405181810167ffffffffffffffff8111828210171561073057600080fd5b604052919050565b600067ffffffffffffffff82111561074f57600080fd5b5060209081020190565b600067ffffffffffffffff82111561077057600080fd5b506020601f91909101601f19160190565b5190565b82818337506000910152565b60005b838110156107ac578181015183820152602001610794565b838111156107bb576000848401525b50505050565b601f01601f19169056fea265627a7a72305820778f279190d6e72b02da76e6b07162432ac0607ec90b3408fdedf3ef2081b4986c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166358be0501811461005b578063d0baa2b114610093578063dda4ac36146100b5575b600080fd5b34801561006757600080fd5b5061007b610076366004610656565b6100d7565b60405161008a939291906106d4565b60405180910390f35b34801561009f57600080fd5b506100a861020e565b60405161008a91906106c0565b3480156100c157600080fd5b506100d56100d0366004610540565b610214565b005b60016020818152600092835260409283902080546004820180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156101745780601f1061014957610100808354040283529160200191610174565b820191906000526020600020905b81548152906001019060200180831161015757829003601f168201915b5050505060058301805460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529495949350908301828280156102045780601f106101d957610100808354040283529160200191610204565b820191906000526020600020905b8154815290600101906020018083116101e757829003601f168201915b5050505050905083565b60005481565b6000805460019081018083556040805160e08101825282815260208082018c81528284018c9052606083018b9052608083018a905260a0830189905260c08301889052938652848152919094208451815591518051929361027d93908501929190910190610314565b5060408201518051610299916002840191602090910190610314565b50606082015180516102b5916003840191602090910190610314565b50608082015180516102d1916004840191602090910190610371565b5060a082015180516102ed916005840191602090910190610371565b5060c08201518051610309916006840191602090910190610314565b505050505050505050565b828054828255906000526020600020908101928215610361579160200282015b828111156103615782518051610351918491602090910190610371565b5091602001919060010190610334565b5061036d9291506103eb565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103b257805160ff19168380011785556103df565b828001600101855582156103df579182015b828111156103df5782518255916020019190600101906103c4565b5061036d929150610411565b61040e91905b8082111561036d576000610405828261042b565b506001016103f1565b90565b61040e91905b8082111561036d5760008155600101610417565b50805460018160011615610100020316600290046000825580601f10610451575061046f565b601f01602090049060005260206000209081019061046f9190610411565b50565b6000601f8201831361048357600080fd5b813561049661049182610738565b610711565b81815260209384019390925082018360005b838110156104d457813586016104be88826104de565b84525060209283019291909101906001016104a8565b5050505092915050565b6000601f820183136104ef57600080fd5b81356104fd61049182610759565b9150808252602083016020830185838301111561051957600080fd5b610524838284610785565b50505092915050565b6000610539823561040e565b9392505050565b60008060008060008060c0878903121561055957600080fd5b863567ffffffffffffffff81111561057057600080fd5b61057c89828a01610472565b965050602087013567ffffffffffffffff81111561059957600080fd5b6105a589828a01610472565b955050604087013567ffffffffffffffff8111156105c257600080fd5b6105ce89828a01610472565b945050606087013567ffffffffffffffff8111156105eb57600080fd5b6105f789828a016104de565b935050608087013567ffffffffffffffff81111561061457600080fd5b61062089828a016104de565b92505060a087013567ffffffffffffffff81111561063d57600080fd5b61064989828a01610472565b9150509295509295509295565b60006020828403121561066857600080fd5b6000610674848461052d565b949350505050565b600061068782610781565b80845261069b816020860160208601610791565b6106a4816107c1565b9093016020019392505050565b6106ba8161040e565b82525050565b602081016106ce82846106b1565b92915050565b606081016106e282866106b1565b81810360208301526106f4818561067c565b90508181036040830152610708818461067c565b95945050505050565b60405181810167ffffffffffffffff8111828210171561073057600080fd5b604052919050565b600067ffffffffffffffff82111561074f57600080fd5b5060209081020190565b600067ffffffffffffffff82111561077057600080fd5b506020601f91909101601f19160190565b5190565b82818337506000910152565b60005b838110156107ac578181015183820152602001610794565b838111156107bb576000848401525b50505050565b601f01601f19169056fea265627a7a72305820778f279190d6e72b02da76e6b07162432ac0607ec90b3408fdedf3ef2081b4986c6578706572696d656e74616cf50037",
+  "sourceMap": "105:843:2:-;;;160:1;130:31;;105:843;8:9:-1;5:2;;;30:1;27;20:12;5:2;105:843:2;;;;;;;",
+  "deployedSourceMap": "105:843:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:48;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;362:48:2;;;;;;;;;;;;;;;;;;;;;;;;;;;130:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;130:31:2;;;;;;;;;;;;524:420;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;524:420:2;;;;;;;;;;;362:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;362:48:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;362:48:2;;;;;;;;;;;;;;;;-1:-1:-1;;362:48:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;362:48:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;130:31::-;;;;:::o;524:420::-;758:17;:19;;;;;;;;;822:118;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;789:32;;;;;;;;;;:151;;;;;;;;:32;;:151;;;;;;;;;;;;:::i;:::-;-1:-1:-1;789:151:2;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;789:151:2;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;789:151:2;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;789:151:2;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;789:151:2;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;524:420:2:o;105:843::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;105:843:2;;;-1:-1:-1;105:843:2;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;105:843:2;;;-1:-1:-1;105:843:2;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o;22:696:-1:-;;138:4;126:17;;122:27;-1:-1;112:2;;163:1;160;153:12;112:2;200:6;187:20;222:86;237:70;300:6;237:70;;;222:86;;;336:21;;;380:4;368:17;;;;213:95;;-1:-1;393:14;;368:17;488:1;473:239;498:6;495:1;492:13;473:239;;;581:3;568:17;560:6;556:30;605:43;644:3;632:10;605:43;;;593:56;;-1:-1;672:4;663:14;;;;691;;;;;520:1;513:9;473:239;;;477:14;105:613;;;;;;;;727:434;;818:4;806:17;;802:27;-1:-1;792:2;;843:1;840;833:12;792:2;880:6;867:20;902:61;917:45;955:6;917:45;;902:61;893:70;;983:6;976:5;969:21;1019:4;1011:6;1007:17;1052:4;1045:5;1041:16;1087:3;1078:6;1073:3;1069:16;1066:25;1063:2;;;1104:1;1101;1094:12;1063:2;1114:41;1148:6;1143:3;1138;1114:41;;;785:376;;;;;;;;1620:118;;1687:46;1725:6;1712:20;1687:46;;;1678:55;1672:66;-1:-1;;;1672:66;1745:1673;;;;;;;2078:3;2066:9;2057:7;2053:23;2049:33;2046:2;;;2095:1;2092;2085:12;2046:2;2130:31;;2181:18;2170:30;;2167:2;;;2213:1;2210;2203:12;2167:2;2233:84;2309:7;2300:6;2289:9;2285:22;2233:84;;;2223:94;;2109:214;2382:2;2371:9;2367:18;2354:32;2406:18;2398:6;2395:30;2392:2;;;2438:1;2435;2428:12;2392:2;2458:84;2534:7;2525:6;2514:9;2510:22;2458:84;;;2448:94;;2333:215;2607:2;2596:9;2592:18;2579:32;2631:18;2623:6;2620:30;2617:2;;;2663:1;2660;2653:12;2617:2;2683:84;2759:7;2750:6;2739:9;2735:22;2683:84;;;2673:94;;2558:215;2832:2;2821:9;2817:18;2804:32;2856:18;2848:6;2845:30;2842:2;;;2888:1;2885;2878:12;2842:2;2908:63;2963:7;2954:6;2943:9;2939:22;2908:63;;;2898:73;;2783:194;3036:3;3025:9;3021:19;3008:33;3061:18;3053:6;3050:30;3047:2;;;3093:1;3090;3083:12;3047:2;3113:63;3168:7;3159:6;3148:9;3144:22;3113:63;;;3103:73;;2987:195;3241:3;3230:9;3226:19;3213:33;3266:18;3258:6;3255:30;3252:2;;;3298:1;3295;3288:12;3252:2;3318:84;3394:7;3385:6;3374:9;3370:22;3318:84;;;3308:94;;3192:216;2040:1378;;;;;;;;;3425:241;;3529:2;3517:9;3508:7;3504:23;3500:32;3497:2;;;3545:1;3542;3535:12;3497:2;3580:1;3597:53;3642:7;3622:9;3597:53;;;3587:63;3491:175;-1:-1;;;;3491:175;3673:292;;3771:35;3800:5;3771:35;;;3823:6;3818:3;3811:19;3835:63;3891:6;3884:4;3879:3;3875:14;3868:4;3861:5;3857:16;3835:63;;;3930:29;3952:6;3930:29;;;3910:50;;;3923:4;3910:50;;3751:214;-1:-1;;;3751:214;3972:110;4045:31;4070:5;4045:31;;;4040:3;4033:44;4027:55;;;4089:193;4197:2;4182:18;;4211:61;4186:9;4245:6;4211:61;;;4168:114;;;;;4289:555;4485:2;4470:18;;4499:61;4474:9;4533:6;4499:61;;;4608:9;4602:4;4598:20;4593:2;4582:9;4578:18;4571:48;4633:64;4692:4;4683:6;4633:64;;;4625:72;;4745:9;4739:4;4735:20;4730:2;4719:9;4715:18;4708:48;4770:64;4829:4;4820:6;4770:64;;;4762:72;4456:388;-1:-1;;;;;4456:388;4851:256;4913:2;4907:9;4939:17;;;5014:18;4999:34;;5035:22;;;4996:62;4993:2;;;5071:1;5068;5061:12;4993:2;5087;5080:22;4891:216;;-1:-1;4891:216;5114:264;;5279:18;5271:6;5268:30;5265:2;;;5311:1;5308;5301:12;5265:2;-1:-1;5340:4;5328:17;;;5358:15;;5202:176;5385:255;;5525:18;5517:6;5514:30;5511:2;;;5557:1;5554;5547:12;5511:2;-1:-1;5630:4;5601;5578:17;;;;-1:-1;;5574:33;5620:15;;5448:192;5913:88;5984:12;;5968:33;6181:145;6262:6;6257:3;6252;6239:30;-1:-1;6318:1;6300:16;;6293:27;6232:94;6335:268;6400:1;6407:101;6421:6;6418:1;6415:13;6407:101;;;6488:11;;;6482:18;6469:11;;;6462:39;6443:2;6436:10;6407:101;;;6523:6;6520:1;6517:13;6514:2;;;6588:1;6579:6;6574:3;6570:16;6563:27;6514:2;6384:219;;;;;6611:97;6699:2;6679:14;-1:-1;;6675:28;;6659:49",
+  "source": "//SPDX-License-Identifier: UNLICENSED\npragma solidity >=0.5.0 <0.9.0;\npragma experimental ABIEncoderV2;\n\ncontract Medication{\n    uint public perscriptionCount=0;\n \n struct Perscription{\n    uint id;\n    string[] medications;\n    string[] doses;\n    string[] intakePeriod;\n    string followUpAppointment;\n    string refferalDoctor;\n    string[] labTests;\n \n }\n\n mapping(uint=>Perscription) public perscriptions; //store patients in db aka blockchain ,treat this like a model\n//keyword memory temporarly stores data in vars\n function createPatient(string[] memory _medications,string[] memory _doses, \n    string[] memory _intakePeriod,      \n    string memory _followUpAppointment,string memory _referralDoctor ,\n    string[] memory _labTests) public {\n     perscriptionCount++;    \n\n     perscriptions[perscriptionCount]=Perscription(perscriptionCount,_medications,_doses,_intakePeriod,_followUpAppointment,\n     _referralDoctor,_labTests);\n } \n\n}",
+  "sourcePath": "/home/osama/Desktop/security-project/SecurityProject/contracts/Medication.sol",
+  "ast": {
+    "absolutePath": "/home/osama/Desktop/security-project/SecurityProject/contracts/Medication.sol",
+    "exportedSymbols": {
+      "Medication": [
+        215
+      ]
+    },
+    "id": 216,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 150,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:31:2"
+      },
+      {
+        "id": 151,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "70:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 215,
+        "linearizedBaseContracts": [
+          215
+        ],
+        "name": "Medication",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 154,
+            "name": "perscriptionCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 215,
+            "src": "130:31:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 152,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "130:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 153,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "160:1:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Medication.Perscription",
+            "id": 173,
+            "members": [
+              {
+                "constant": false,
+                "id": 156,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "191:7:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 155,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "191:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 159,
+                "name": "medications",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "204:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 157,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "204:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 158,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "204:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 162,
+                "name": "doses",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "230:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 160,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 161,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "230:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 165,
+                "name": "intakePeriod",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "250:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 163,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "250:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 164,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "250:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 167,
+                "name": "followUpAppointment",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "277:26:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 166,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 169,
+                "name": "refferalDoctor",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "309:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 168,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 172,
+                "name": "labTests",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "336:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 170,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 171,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "336:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Perscription",
+            "nodeType": "StructDefinition",
+            "scope": 215,
+            "src": "166:193:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 177,
+            "name": "perscriptions",
+            "nodeType": "VariableDeclaration",
+            "scope": 215,
+            "src": "362:48:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+              "typeString": "mapping(uint256 => struct Medication.Perscription)"
+            },
+            "typeName": {
+              "id": 176,
+              "keyType": {
+                "id": 174,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "370:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "362:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+                "typeString": "mapping(uint256 => struct Medication.Perscription)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 175,
+                "name": "Perscription",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 173,
+                "src": "376:12:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Perscription_$173_storage_ptr",
+                  "typeString": "struct Medication.Perscription"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 213,
+              "nodeType": "Block",
+              "src": "751:193:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 197,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "758:19:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 196,
+                      "name": "perscriptionCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "758:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 198,
+                  "nodeType": "ExpressionStatement",
+                  "src": "758:19:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 211,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 199,
+                        "name": "perscriptions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 177,
+                        "src": "789:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+                          "typeString": "mapping(uint256 => struct Medication.Perscription storage ref)"
+                        }
+                      },
+                      "id": 201,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 200,
+                        "name": "perscriptionCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 154,
+                        "src": "803:17:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "789:32:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Perscription_$173_storage",
+                        "typeString": "struct Medication.Perscription storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 203,
+                          "name": "perscriptionCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 154,
+                          "src": "835:17:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 204,
+                          "name": "_medications",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 180,
+                          "src": "853:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 205,
+                          "name": "_doses",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 183,
+                          "src": "866:6:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 206,
+                          "name": "_intakePeriod",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 186,
+                          "src": "873:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 207,
+                          "name": "_followUpAppointment",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 188,
+                          "src": "887:20:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 208,
+                          "name": "_referralDoctor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 190,
+                          "src": "914:15:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 209,
+                          "name": "_labTests",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 193,
+                          "src": "930:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        ],
+                        "id": 202,
+                        "name": "Perscription",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 173,
+                        "src": "822:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Perscription_$173_storage_ptr_$",
+                          "typeString": "type(struct Medication.Perscription storage pointer)"
+                        }
+                      },
+                      "id": 210,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "822:118:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Perscription_$173_memory",
+                        "typeString": "struct Medication.Perscription memory"
+                      }
+                    },
+                    "src": "789:151:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Perscription_$173_storage",
+                      "typeString": "struct Medication.Perscription storage ref"
+                    }
+                  },
+                  "id": 212,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:151:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 214,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createPatient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 194,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "name": "_medications",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "547:28:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 178,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "547:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 179,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "547:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 183,
+                  "name": "_doses",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "576:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 181,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "576:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 182,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "576:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 186,
+                  "name": "_intakePeriod",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "605:29:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 184,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "605:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 185,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "605:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 188,
+                  "name": "_followUpAppointment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "646:34:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "646:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 190,
+                  "name": "_referralDoctor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "681:29:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 189,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "681:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 193,
+                  "name": "_labTests",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "717:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 191,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "717:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 192,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "717:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:197:2"
+            },
+            "returnParameters": {
+              "id": 195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "751:0:2"
+            },
+            "scope": 215,
+            "src": "524:420:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 216,
+        "src": "105:843:2"
+      }
+    ],
+    "src": "38:910:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/osama/Desktop/security-project/SecurityProject/contracts/Medication.sol",
+    "exportedSymbols": {
+      "Medication": [
+        215
+      ]
+    },
+    "id": 216,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 150,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:31:2"
+      },
+      {
+        "id": 151,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "70:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 215,
+        "linearizedBaseContracts": [
+          215
+        ],
+        "name": "Medication",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 154,
+            "name": "perscriptionCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 215,
+            "src": "130:31:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 152,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "130:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 153,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "160:1:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Medication.Perscription",
+            "id": 173,
+            "members": [
+              {
+                "constant": false,
+                "id": 156,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "191:7:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 155,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "191:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 159,
+                "name": "medications",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "204:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 157,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "204:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 158,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "204:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 162,
+                "name": "doses",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "230:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 160,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 161,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "230:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 165,
+                "name": "intakePeriod",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "250:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 163,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "250:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 164,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "250:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 167,
+                "name": "followUpAppointment",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "277:26:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 166,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 169,
+                "name": "refferalDoctor",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "309:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 168,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 172,
+                "name": "labTests",
+                "nodeType": "VariableDeclaration",
+                "scope": 173,
+                "src": "336:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 170,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 171,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "336:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Perscription",
+            "nodeType": "StructDefinition",
+            "scope": 215,
+            "src": "166:193:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 177,
+            "name": "perscriptions",
+            "nodeType": "VariableDeclaration",
+            "scope": 215,
+            "src": "362:48:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+              "typeString": "mapping(uint256 => struct Medication.Perscription)"
+            },
+            "typeName": {
+              "id": 176,
+              "keyType": {
+                "id": 174,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "370:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "362:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+                "typeString": "mapping(uint256 => struct Medication.Perscription)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 175,
+                "name": "Perscription",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 173,
+                "src": "376:12:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Perscription_$173_storage_ptr",
+                  "typeString": "struct Medication.Perscription"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 213,
+              "nodeType": "Block",
+              "src": "751:193:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 197,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "758:19:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 196,
+                      "name": "perscriptionCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "758:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 198,
+                  "nodeType": "ExpressionStatement",
+                  "src": "758:19:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 211,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 199,
+                        "name": "perscriptions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 177,
+                        "src": "789:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Perscription_$173_storage_$",
+                          "typeString": "mapping(uint256 => struct Medication.Perscription storage ref)"
+                        }
+                      },
+                      "id": 201,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 200,
+                        "name": "perscriptionCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 154,
+                        "src": "803:17:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "789:32:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Perscription_$173_storage",
+                        "typeString": "struct Medication.Perscription storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 203,
+                          "name": "perscriptionCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 154,
+                          "src": "835:17:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 204,
+                          "name": "_medications",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 180,
+                          "src": "853:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 205,
+                          "name": "_doses",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 183,
+                          "src": "866:6:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 206,
+                          "name": "_intakePeriod",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 186,
+                          "src": "873:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 207,
+                          "name": "_followUpAppointment",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 188,
+                          "src": "887:20:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 208,
+                          "name": "_referralDoctor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 190,
+                          "src": "914:15:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 209,
+                          "name": "_labTests",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 193,
+                          "src": "930:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                            "typeString": "string memory[] memory"
+                          }
+                        ],
+                        "id": 202,
+                        "name": "Perscription",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 173,
+                        "src": "822:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Perscription_$173_storage_ptr_$",
+                          "typeString": "type(struct Medication.Perscription storage pointer)"
+                        }
+                      },
+                      "id": 210,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "822:118:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Perscription_$173_memory",
+                        "typeString": "struct Medication.Perscription memory"
+                      }
+                    },
+                    "src": "789:151:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Perscription_$173_storage",
+                      "typeString": "struct Medication.Perscription storage ref"
+                    }
+                  },
+                  "id": 212,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:151:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 214,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createPatient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 194,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "name": "_medications",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "547:28:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 178,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "547:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 179,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "547:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 183,
+                  "name": "_doses",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "576:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 181,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "576:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 182,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "576:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 186,
+                  "name": "_intakePeriod",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "605:29:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 184,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "605:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 185,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "605:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 188,
+                  "name": "_followUpAppointment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "646:34:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "646:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 190,
+                  "name": "_referralDoctor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "681:29:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 189,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "681:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 193,
+                  "name": "_labTests",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "717:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 191,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "717:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 192,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "717:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:197:2"
+            },
+            "returnParameters": {
+              "id": 195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "751:0:2"
+            },
+            "scope": 215,
+            "src": "524:420:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 216,
+        "src": "105:843:2"
+      }
+    ],
+    "src": "38:910:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x9389FDad0C2d2b36e6f5A7292e475071f94e548d",
+      "transactionHash": "0xe93ee38d9bb8a89770a9b304438df5c57ab934ad5262ea566cfd64c0304eb5f5"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2022-05-31T19:33:35.415Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
